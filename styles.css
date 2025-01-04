@@ -1,0 +1,47 @@
+/* Page styles */
+body {
+  background-image: url("body.jpeg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+#grid {
+  display: grid;
+  grid-template-rows: repeat(15, 20px); /* 15 rows */
+  grid-template-columns: repeat(20, 20px); /* 20 columns */
+  gap: 2px;
+  margin-top: 20px;
+}
+
+/* Individual cells */
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  border: 1px solid #111;
+  transition: background-color 0.3s ease;
+}
+
+/* Active cells (raindrops) */
+.cell.active {
+  background-color: magenta;
+  animation: fade 0.5s forwards;
+}
+
+/* Fade effect */
+@keyframes fade {
+  from {
+    background-color: magenta;
+  }
+  to {
+    background-color: transparent;
+  }
+}
